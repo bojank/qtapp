@@ -1,13 +1,23 @@
-<md-toolbar layout="row" layout-align="center center" ng-controller="NavbarCtrl">
-
-  <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
-
-  <section flex layout="row" layout-align="left center">
-    <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#" class="md-raised">About</md-button>
-    <md-button href="#" class="md-raised">Contact</md-button>
-  </section>
-
-  <md-button href="#">Current date: {{ date | date:'yyyy-MM-dd' }}</md-button>
-
-</md-toolbar>
+<!--md-toolbar layout="row" layout-align="start center">
+	<h1 class="md-toolbar-tools header">QuestTrade Person Manager</h1>
+	<md-button href="#/">List</md-button>
+</md-toolbar-->
+<div ng-controller="NavbarController" layout="column">
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+      <md-toolbar>
+        <h1 class="md-toolbar-tools">Person Manager</h1>
+      </md-toolbar>
+      <md-content class="md-padding">
+		<md-button class="md-primary" href="#/">
+			<i class="fa fa-list"></i> List
+		</md-button><br/>
+        <md-button ng-click="close()" class="md-primary" hide-gt-sm>
+          Close Menu
+        </md-button>
+      </md-content>
+    </md-sidenav>
+    <md-button class="md-button-colored" hide-gt-sm ng-click="toggle()" aria-label="Menu">
+		<i class="fa fa-align-justify fa-3x"></i>
+	</md-button>
+</div>

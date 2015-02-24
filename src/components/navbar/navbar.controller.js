@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('questtrade')
-  .controller('NavbarCtrl', function ($scope) {
-    $scope.date = new Date();
-  });
+.controller('NavbarController', function($scope, $mdSidenav) {
+  $scope.toggle = function() {
+    $mdSidenav('left').toggle();
+  };
+  $scope.close = function() {
+    $mdSidenav('left').close();
+  };
+})
