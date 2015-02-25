@@ -7,7 +7,7 @@ angular.module('questtrade', ['ngResource', 'ngRoute', 'ngMaterial'])
         templateUrl: 'app/person/list.html',
         controller: 'PersonController'
       })
-      .when('/person', {
+      .when('/person/:personId', {
         templateUrl: 'app/person/addedit.html',
         controller: 'PersonController'
       })

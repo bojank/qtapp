@@ -1,0 +1,32 @@
+<h1>{{$routeParams.personId === 'create' ? 'Create Person': 'Edit Person'}}</h1>
+<md-content class="md-padding">
+<form novalidate  name="personForm">
+  <md-input-container>
+    <label>Name</label>
+    <md-input required name="name" ng-model="person.name">
+    <div ng-messages="personForm.name.$error">
+      <div ng-message="required">Name is required.</div>
+    </div>
+  </md-input-container>
+  <md-input-container>
+    <label>Phone Number</label>
+    <md-input required phone name="phone" ng-model="person.phone">
+    <div ng-messages="personForm.phone.$error">
+      <div ng-message="required">Phone is required.</div>
+    </div>
+  </md-input-container>
+  <md-input-container>
+    <label>Address</label>
+    <md-input required name="address" ng-model="person.address">
+    <div ng-messages="personForm.address.$error">
+      <div ng-message="required">Address is required.</div>
+    </div>
+  </md-input-container>
+  <div ng-if="personForm.$invalid && personForm.$submitted && personForm.$pristine">
+      <div>Please Fill Out the Form</div>
+    </div>
+  <md-button class="md-primary md-raised submitbtn" type="submit" ng-click="save(person)">
+    <i class="fa fa-save"></i> Save Person
+  </md-button><br/><br/>
+</form>
+</md-content>

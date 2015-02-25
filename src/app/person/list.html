@@ -1,0 +1,12 @@
+<h1>Person List</h1>
+<md-input-container>
+<label for="searchName">Name Search</label>
+<md-input id="searchName" ng-model="search.name">
+</md-input-container>
+<div class="personItem" flex ng-repeat="person in people | filter:search">
+  <div>
+    <md-button href="#/person/{{person.id}}" class="md-button-colored" aria-label="Edit"><i class="fa fa-pencil-square-o fa-lg"></i></md-button>
+    <md-button ng-click="delete(person)" class="md-button-colored" aria-label="Delete"><i class="fa fa-trash fa-lg"></i></md-button>
+    {{person.name}}
+  </div>
+</div>

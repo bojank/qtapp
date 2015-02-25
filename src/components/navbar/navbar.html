@@ -1,7 +1,3 @@
-<!--md-toolbar layout="row" layout-align="start center">
-	<h1 class="md-toolbar-tools header">QuestTrade Person Manager</h1>
-	<md-button href="#/">List</md-button>
-</md-toolbar-->
 <div ng-controller="NavbarController" layout="column">
   <section layout="row" flex>
     <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
@@ -9,11 +5,14 @@
         <h1 class="md-toolbar-tools">Person Manager</h1>
       </md-toolbar>
       <md-content class="md-padding">
-		<md-button class="md-primary" href="#/">
+		<md-button class="md-primary md-raised" href="#/">
 			<i class="fa fa-list"></i> List
-		</md-button><br/>
-        <md-button ng-click="close()" class="md-primary" hide-gt-sm>
-          Close Menu
+		</md-button><br/><br/>
+		<md-button class="md-primary md-raised" href="#/person/create">
+			<i class="fa fa-user-plus"></i> Add Person
+		</md-button><br/><br/>
+        <md-button ng-click="close()" class="md-primary md-raised" hide-gt-sm>
+        	<i class="fa fa-close"></i> Close Menu
         </md-button>
       </md-content>
     </md-sidenav>

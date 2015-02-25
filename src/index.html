@@ -25,7 +25,9 @@
     <![endif]-->
     <div layout="vertical" layout-fill>
       <header ng-include="'components/navbar/navbar.html'"></header>
-      <div ng-view></div>
+      <md-content class="md-padding" flex>
+        <div ng-view></div>
+      </md-content>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
